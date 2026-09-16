@@ -1,6 +1,7 @@
 -- ORACLE EBS PROCEDURE
+-- DAY(6)
 
--- Create an EBS procedure with mandatory parameters
+-- Create an Oracle EBS procedure
 CREATE OR REPLACE PROCEDURE MARYAM_PR_EBS
 (
     ERRBUF OUT VARCHAR2,

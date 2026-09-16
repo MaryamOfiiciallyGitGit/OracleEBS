@@ -1,4 +1,5 @@
 -- PROCEDURE AND FUNCTION
+-- DAY(5)
 
 -- Create a simple procedure
 CREATE OR REPLACE PROCEDURE MARYAM_PR_TEST IS
@@ -13,7 +14,7 @@ SET SERVEROUTPUT ON;
 -- Execute the procedure
 EXEC MARYAM_PR_TEST;
 
--- Create a function that returns one value
+-- Create a function
 CREATE OR REPLACE FUNCTION MARYAM_FN_TEST
 RETURN VARCHAR2 IS
     V_MSG VARCHAR2(2000);
