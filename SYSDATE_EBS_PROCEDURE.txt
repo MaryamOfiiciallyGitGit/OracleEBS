@@ -1,0 +1,36 @@
+-- SYSDATE EBS PROCEDURE
+
+-- Create a procedure to display the current date in Oracle EBS
+CREATE OR REPLACE PROCEDURE MARYAM_PR_SYSDT
+(
+    ERRBUF OUT VARCHAR2,
+    RETCODE OUT NUMBER
+) IS
+    V_DT DATE;
+BEGIN
+    -- Get the current date
+    SELECT SYSDATE
+    INTO V_DT
+    FROM DUAL;
+
+    -- Write a message to the log
+    FND_FILE.PUT_LINE(
+        FND_FILE.LOG,
+        'YOU CAN SEE LOG DETAILS HERE !'
+    );
+
+    -- Write the current date to output
+    FND_FILE.PUT_LINE(
+        FND_FILE.OUTPUT,
+        'CURRENT DATE = ' || V_DT
+    );
+
+EXCEPTION
+    -- Handle any error
+    WHEN OTHERS THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'CHECK YOUR PROGRAM: ' || ERRBUF || ' ERRCODE = ' || RETCODE
+        );
+END;
+/

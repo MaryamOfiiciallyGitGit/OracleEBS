@@ -1,0 +1,15 @@
+-- ORACLE EBS PROCEDURE
+
+-- Create an EBS procedure with mandatory parameters
+CREATE OR REPLACE PROCEDURE MARYAM_PR_EBS
+(
+    ERRBUF OUT VARCHAR2,
+    RETCODE OUT NUMBER
+) IS
+BEGIN
+    FND_FILE.PUT_LINE(
+        FND_FILE.OUTPUT,
+        'WELCOME TO ORACLE EBS PROC..!'
+    );
+END;
+/

@@ -1,0 +1,67 @@
+-- FACTORIAL PROCEDURE IN ORACLE EBS
+
+-- Create EBS factorial procedure
+CREATE OR REPLACE PROCEDURE MARYAM_EBS_FACT
+(
+    ERRBUF OUT VARCHAR2,
+    RETCODE OUT NUMBER,
+    N NUMBER
+) IS
+    S NUMBER := N;
+    RES NUMBER := N;
+
+    FACT_1 EXCEPTION;
+    FACT_0 EXCEPTION;
+
+BEGIN
+    -- Handle 0 and 1
+    IF S = 0 OR S = 1 THEN
+        RAISE FACT_1;
+
+    -- Handle negative input
+    ELSIF S < 0 THEN
+        RAISE FACT_0;
+    END IF;
+
+    -- Calculate factorial
+    LOOP
+        S := S - 1;
+        RES := RES * S;
+        EXIT WHEN S = 2;
+    END LOOP;
+
+    FND_FILE.PUT_LINE(
+        FND_FILE.OUTPUT,
+        'FACTORIAL = ' || RES
+    );
+
+EXCEPTION
+    -- Factorial of 0 or 1
+    WHEN FACT_1 THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'FACTORIAL = 1'
+        );
+
+    -- Negative input
+    WHEN FACT_0 THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'INPUT N CANNOT BE LESS THAN 0'
+        );
+
+    -- Missing input
+    WHEN NO_DATA_FOUND THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'INPUT A NUMBER TO COMPUTE FACTORIAL'
+        );
+
+    -- Handle any other error
+    WHEN OTHERS THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'CHECK YOUR PROGRAM !!!'
+        );
+END;
+/
