@@ -1,0 +1,66 @@
+-- FACTORIAL WITH EXCEPTION HANDLING
+-- DAY(8)
+
+-- Show DBMS output
+SET SERVEROUTPUT ON;
+
+-- Create factorial procedure
+CREATE OR REPLACE PROCEDURE MARYAM_PR_FACT
+(
+    N NUMBER
+) IS
+    S NUMBER := N;
+    RES NUMBER := N;
+
+    FACT_1 EXCEPTION;
+    FACT_0 EXCEPTION;
+
+BEGIN
+    -- Handle 0 and 1
+    IF S = 0 OR S = 1 THEN
+        RAISE FACT_1;
+
+    -- Handle negative input
+    ELSIF S < 0 THEN
+        RAISE FACT_0;
+    END IF;
+
+    -- Calculate factorial
+    LOOP
+        S := S - 1;
+        RES := RES * S;
+        EXIT WHEN S = 2;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('FACTORIAL = ' || RES);
+
+EXCEPTION
+    -- Factorial of 0 or 1
+    WHEN FACT_1 THEN
+        DBMS_OUTPUT.PUT_LINE('FACTORIAL = 1');
+
+    -- Negative input
+    WHEN FACT_0 THEN
+        DBMS_OUTPUT.PUT_LINE('INPUT N CANNOT BE LESS THAN 0');
+
+    -- Missing input
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('INPUT A NUMBER TO COMPUTE FACTORIAL');
+
+    -- Handle any other error
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('CHECK YOUR PROGRAM !!!');
+END;
+/
+
+-- Test factorial of 5
+EXEC MARYAM_PR_FACT(5);
+
+-- Test factorial of 1
+EXEC MARYAM_PR_FACT(1);
+
+-- Test factorial of 0
+EXEC MARYAM_PR_FACT(0);
+
+-- Test negative input
+EXEC MARYAM_PR_FACT(-5);
