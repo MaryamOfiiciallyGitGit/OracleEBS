@@ -1,0 +1,43 @@
+TASK: Create Value Set and add it to the parameters report
+
+1. Login to Oracle EBS.
+
+2. Go to:
+   Application Developer
+   -> Application
+   -> Validation
+   -> Set
+
+3. Create Value Set:
+   Name: MARYAM_VS_DNO
+   Datatype: NUMBER
+   Maximum Size: 4
+   Validation Type: TABLE
+
+4. Click Edit Information.
+
+5. Enter:
+   Table Name: EMP
+   Value Column Name: DEPTNO
+
+6. Save.
+
+7. Go to:
+   Application Developer
+   -> Concurrent
+   -> Program
+
+8. Query the parameter report.
+
+9. Open Parameters.
+
+10. For parameter DNO:
+    Value Set: MARYAM_VS_DNO
+    Token: DNO
+
+11. Save.
+
+12. Submit the report.
+
+Result:
+The DNO parameter uses the Value Set and shows DEPTNO values.

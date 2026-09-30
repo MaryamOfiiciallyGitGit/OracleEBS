@@ -1,0 +1,44 @@
+TASK: Create an Oracle EBS procedure & register it in EBS
+
+Use the existing procedure:
+MARYAM_PR_EBS
+
+1. Compile the procedure in SQLPlus.
+
+2. Login to Oracle EBS.
+
+3. Go to:
+   Application Developer
+   -> Concurrent
+   -> Executable
+
+4. Create Executable:
+   Name: MARYAM_PR_EBS
+   Short Name: MARYAM_PR_EBS
+   Execution Method: PL/SQL Stored Procedure
+   Execution File Name: MARYAM_PR_EBS
+
+5. Save.
+
+6. Create Concurrent Program:
+   Name: MARYAM_PR_EBS
+   Short Name: MARYAM_PR_EBS
+   Application: AOL
+   Executable: MARYAM_PR_EBS
+
+7. Save.
+
+8. Add the program to the Request Group.
+
+9. Switch to your Responsibility.
+
+10. Submit a New Request.
+
+11. Select MARYAM_PR_EBS.
+
+12. Submit and refresh until Completed.
+
+13. View Output.
+
+Result:
+WELCOME TO ORACLE EBS PROC..!

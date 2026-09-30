@@ -1,0 +1,44 @@
+TASK: Create report and register with parameters
+
+1. Open Oracle Reports Builder.
+
+2. Use this query:
+
+SELECT *
+FROM EMP
+WHERE DEPTNO = :DNO;
+
+3. Save the report:
+   MARYAM_PAR_REPORT.rdf
+
+4. Compile the report.
+
+5. Move the .rdf file to:
+   /u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/reports/US
+
+6. Login to Oracle EBS.
+
+7. Create Executable:
+   Execution Method: Oracle Reports
+   Execution File Name: MARYAM_PAR_REPORT
+
+8. Create Concurrent Program.
+
+9. Add Parameter:
+   Name: DNO
+   Token: DNO
+   Value Set: NUMBER_15 or MARYAM_VS_DNO
+
+10. Add the program to the Request Group.
+
+11. Switch to your Responsibility.
+
+12. Submit the request.
+
+13. Enter DNO:
+    10 or 20 or 30
+
+14. View Output.
+
+Result:
+The report displays employees for the entered DEPTNO.

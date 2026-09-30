@@ -1,0 +1,18 @@
+TASK: SSH to EBS Machine
+
+1. Open PuTTY.
+2. Enter Host Name: EBS.EXAMPLE.COM
+3. Click Open.
+4. Login as: root
+5. Enter password: welcome
+6. Check the current directory:
+   pwd
+7. Navigate to the Oracle EBS application folder:
+   cd /u01/install/VISION/fs1/EBSapps/appl
+8. Check the location:
+   pwd
+9. List files/folders if needed:
+   ls
+
+Result:
+Successful SSH login to the EBS machine.

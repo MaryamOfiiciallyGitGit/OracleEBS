@@ -1,0 +1,27 @@
+TASK: Query by example in EBS
+
+1. Login to Oracle EBS.
+
+2. Open:
+   Application Developer
+   -> Executable
+
+3. Go to:
+   View
+   -> Query by Example
+   -> Enter
+
+4. In Name enter:
+   A%
+
+5. Go to:
+   View
+   -> Query by Example
+   -> Run
+
+6. Repeat with:
+   %S
+
+Result:
+A% shows names starting with A.
+%S shows names ending with S.

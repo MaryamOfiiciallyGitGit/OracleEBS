@@ -1,0 +1,42 @@
+TASK: Register SYSDATE procedure in EBS
+
+Use the existing procedure:
+MARYAM_PR_SYSDT
+
+1. Login to Oracle EBS.
+
+2. Go to:
+   Application Developer
+   -> Concurrent
+   -> Executable
+
+3. Create Executable:
+   Name: MARYAM_PR_SYSDT
+   Short Name: MARYAM_PR_SYSDT
+   Execution Method: PL/SQL Stored Procedure
+   Execution File Name: MARYAM_PR_SYSDT
+
+4. Save.
+
+5. Create Concurrent Program:
+   Name: MARYAM_PR_SYSDT
+   Executable: MARYAM_PR_SYSDT
+
+6. Save.
+
+7. Add the program to the existing Request Group.
+
+8. Switch to your Responsibility.
+
+9. Submit a New Request.
+
+10. Select MARYAM_PR_SYSDT.
+
+11. Submit.
+
+12. Refresh until Completed.
+
+13. View Output and View Log.
+
+Result:
+The current system date is displayed in the request output.

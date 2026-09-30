@@ -1,0 +1,41 @@
+TASK: Setup Oracle Machine
+
+1. Open Remote Desktop Connection.
+
+Windows:
+   Start
+   -> Run
+   -> mstsc
+
+2. Enter the EBS server address provided for training.
+
+3. Login using the assigned training username and password.
+
+4. Confirm these tools are available:
+   Oracle Forms Builder
+   Oracle Reports Builder
+   SQLPlus
+   SQL Developer
+   WinSCP
+   PuTTY
+   Browser for Oracle EBS
+
+5. Test SQLPlus:
+   Username: APPS
+   Password: apps
+   HostString: EBSDB
+
+6. Run:
+   SHOW USER;
+
+7. Test database access:
+   SELECT COUNT(*) FROM TAB;
+
+8. Test SQL Developer:
+   Username: APPS
+   Password: apps
+   Hostname: EBS.EXAMPLE.COM
+   Service Name: EBSDB
+
+Result:
+The Oracle training machine and database connection are ready.

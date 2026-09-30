@@ -1,0 +1,42 @@
+TASK: Register Form in EBS
+
+1. Compile the form:
+   .fmb -> .fmx
+
+2. Move the .fmx file to:
+   /u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US
+
+3. Login to Oracle EBS.
+
+4. Go to:
+   Application Developer
+   -> Application
+   -> Form
+
+5. Create the Form:
+   Form Name: MARYAM_APSTAND
+   User Form Name: MARYAM_APSTAND
+   Save.
+
+6. Go to:
+   Application
+   -> Function
+
+7. Create the Function:
+   Function Name: MARYAM_APSTAND
+   User Function Name: MARYAM_APSTAND
+   Type: FORM
+   Form: MARYAM_APSTAND
+   Save.
+
+8. Go to:
+   Application
+   -> Menu
+
+9. Query your menu and attach the new Function.
+10. Save.
+11. Switch to your responsibility.
+12. Open the form.
+
+Result:
+The form is registered and can be opened from Oracle EBS.

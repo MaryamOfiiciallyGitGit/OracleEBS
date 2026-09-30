@@ -1,0 +1,45 @@
+TASK: Change field name and make a field mandatory (yellow)
+
+1. Open:
+   Human Resources, Vision Enterprises
+
+2. Open:
+   Enter and Maintain
+
+3. Click the STATUS field.
+
+4. Go to:
+   Help
+   -> Diagnostics
+   -> Examine
+
+5. Note:
+   Block: PERSON
+   Field: D_MARITAL_STATUS
+
+6. Go to:
+   Help
+   -> Diagnostics
+   -> Custom Code
+   -> Personalize
+
+7. Create personalization for changing the field name:
+   Description: Changing Field Name
+   Target Object: PERSON.D_MARITAL_STATUS
+   Set the required Prompt/Label.
+   Validate.
+   Apply Now.
+   Save.
+
+8. Create another personalization:
+   Description: Making a Field MANDATE
+   Object Name: PERSON.D_MARITAL_STATUS
+   Property: REQUIRED
+   Value: TRUE
+
+9. Validate.
+10. Apply Now.
+11. Save.
+
+Result:
+The field name changes and the field becomes mandatory/yellow.

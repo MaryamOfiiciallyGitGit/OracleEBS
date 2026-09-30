@@ -1,0 +1,71 @@
+TASK: Register the factorial procedure in EBS
+
+1. Create an EBS factorial procedure using:
+   ERRBUF OUT VARCHAR2
+   RETCODE OUT NUMBER
+   N NUMBER
+
+2. Use FND_FILE.PUT_LINE for the output.
+
+Example:
+
+CREATE OR REPLACE PROCEDURE MARYAM_EBS_FACT
+(
+    ERRBUF OUT VARCHAR2,
+    RETCODE OUT NUMBER,
+    N NUMBER
+) IS
+    S NUMBER := N;
+    RES NUMBER := N;
+    FACT_1 EXCEPTION;
+    FACT_0 EXCEPTION;
+BEGIN
+    IF S = 0 OR S = 1 THEN
+        RAISE FACT_1;
+    ELSIF S < 0 THEN
+        RAISE FACT_0;
+    END IF;
+
+    LOOP
+        S := S - 1;
+        RES := RES * S;
+        EXIT WHEN S = 2;
+    END LOOP;
+
+    FND_FILE.PUT_LINE(FND_FILE.OUTPUT, 'FACTORIAL = ' || RES);
+
+EXCEPTION
+    WHEN FACT_1 THEN
+        FND_FILE.PUT_LINE(FND_FILE.OUTPUT, 'FACTORIAL = 1');
+    WHEN FACT_0 THEN
+        FND_FILE.PUT_LINE(FND_FILE.OUTPUT, 'INPUT N CANNOT BE LESS THAN 0');
+    WHEN OTHERS THEN
+        FND_FILE.PUT_LINE(FND_FILE.OUTPUT, 'CHECK YOUR PROGRAM !!!');
+END;
+/
+
+3. Login to Oracle EBS.
+
+4. Create Executable:
+   Name: MARYAM_EBS_FACT
+   Execution Method: PL/SQL Stored Procedure
+   Execution File Name: MARYAM_EBS_FACT
+
+5. Create Concurrent Program.
+
+6. Add parameter:
+   Name: N
+
+7. Add the program to the Request Group.
+
+8. Switch to your Responsibility.
+
+9. Submit the request.
+
+10. Enter N:
+    5
+
+11. View Output.
+
+Result:
+FACTORIAL = 120

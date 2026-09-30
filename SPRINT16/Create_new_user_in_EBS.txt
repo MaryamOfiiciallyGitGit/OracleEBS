@@ -1,0 +1,26 @@
+TASK: Create new user in EBS
+
+1. Login to Oracle EBS using an administrator account.
+
+2. Go to:
+   System Administrator
+   -> Security
+   -> User
+   -> Define
+
+3. Enter:
+   User Name: required username
+   Password: welcome
+
+4. Set Password Expiration if required.
+
+5. Add Responsibilities, for example:
+   Application Developer
+   System Administrator
+
+6. Save.
+
+7. Query the user again to confirm.
+
+Result:
+The new user is created and the selected responsibilities are assigned.

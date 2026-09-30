@@ -1,0 +1,39 @@
+TASK: Restrict personalization access for a site and a specific user
+
+1. Login to Oracle EBS.
+
+2. Go to:
+   System Administrator
+   -> Profile
+   -> System
+
+3. Search for:
+   UTIL%
+
+4. Find:
+   Utilities: Diagnostics
+
+5. For Site level:
+   Set Site value = No
+   Save.
+
+6. For a specific User:
+   Query the required user.
+   Set the User value as required:
+   Yes = allow diagnostics access
+   No  = restrict diagnostics access
+
+7. Save.
+
+8. Login with the required user.
+
+9. Open a form.
+
+10. Go to:
+    Help
+    -> Diagnostics
+    -> Custom Code
+    -> Personalize
+
+Result:
+Personalization access follows the profile setting for the Site or User.

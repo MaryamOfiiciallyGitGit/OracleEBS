@@ -1,0 +1,32 @@
+TASK: Create canvas and data block in the form builder
+
+1. Open Oracle Forms Builder.
+
+2. Create a new Form Module.
+
+3. Connect to database:
+   Username: APPS
+   Password: apps
+   HostString: EBSDB
+
+4. Create Canvas.
+
+5. Create a Data Block.
+
+6. Select table:
+   EMP
+
+7. Select the required columns/items.
+
+8. Place the block items on the Canvas.
+
+9. Save:
+   EMP.fmb
+
+10. Compile:
+    EMP.fmx
+
+11. Run the form.
+
+Result:
+The EMP data block is displayed on the Canvas and can query records.

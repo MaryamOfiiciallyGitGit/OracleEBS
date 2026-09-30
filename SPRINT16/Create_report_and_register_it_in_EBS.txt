@@ -1,0 +1,43 @@
+TASK: Create report and register it in EBS
+
+1. Open Oracle Reports Builder.
+
+2. Create a new report.
+
+3. Use this query:
+
+SELECT *
+FROM EMP;
+
+4. Select report style:
+   Tabular
+
+5. Save:
+   MARYAM_EMP_REPORT.rdf
+
+6. Compile.
+
+7. Move the .rdf file to:
+   /u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/reports/US
+
+8. Login to Oracle EBS.
+
+9. Create Executable:
+   Name: MARYAM_EMP_REPORT
+   Execution Method: Oracle Reports
+   Execution File Name: MARYAM_EMP_REPORT
+
+10. Create Concurrent Program:
+    Name: MARYAM_EMP_REPORT
+    Executable: MARYAM_EMP_REPORT
+
+11. Add the program to the Request Group.
+
+12. Switch to your Responsibility.
+
+13. Submit the request.
+
+14. View Output.
+
+Result:
+The EMP report runs successfully from Oracle EBS.

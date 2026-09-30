@@ -1,0 +1,21 @@
+TASK: Place .fmx file in EBS
+
+1. Compile the form in Oracle Forms Builder.
+
+Example:
+   MARYAM_APSTAND.fmb
+   -> MARYAM_APSTAND.fmx
+
+2. Open WinSCP.
+
+3. Login to the EBS server.
+
+4. Navigate to:
+   /u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/forms/US
+
+5. Copy the .fmx file from the local machine to this folder.
+
+6. Confirm the file is present on the EBS server.
+
+Result:
+The compiled .fmx file is available in the EBS forms/US folder.

@@ -1,0 +1,35 @@
+TASK: Create master block DEPT and detail block EMP
+
+1. Open Oracle Forms Builder.
+
+2. Create a Canvas.
+
+3. Create Data Block:
+   DEPT
+
+4. Place DEPT items on the Canvas.
+
+5. Create another Data Block:
+   EMP
+
+6. Place EMP items on the same Canvas.
+
+7. Create the relationship:
+   Master Block: DEPT
+   Master Item: DEPTNO
+   Detail Block: EMP
+   Detail Item: DEPTNO
+
+8. Join:
+   EMP.DEPTNO = DEPT.DEPTNO
+
+9. Save:
+   MARYAM_MASTER_DETAIL.fmb
+
+10. Compile:
+    MARYAM_MASTER_DETAIL.fmx
+
+11. Run the form and query data.
+
+Result:
+The DEPT block works as Master and EMP works as Detail.
