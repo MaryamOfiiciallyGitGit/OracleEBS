@@ -1,0 +1,21 @@
+TASK: Create LOV for DEPTNO in Oracle Forms
+
+This task is mainly done in Oracle Forms Builder.
+
+Simple Record Group query for DEPTNO:
+
+SELECT DEPTNO, DNAME
+FROM DEPT
+ORDER BY DEPTNO;
+
+Steps:
+1. Open Oracle Forms Builder.
+2. Open/create the EMP form.
+3. Create a Record Group using the query above.
+4. Create an LOV based on that Record Group.
+5. Return DEPTNO to the EMP.DEPTNO item.
+6. Save and Compile the form.
+7. Run the form and test the LOV.
+8. Register the form in EBS if required.
+
+Note: The training file states that LOV in Forms is based on a Record Group; the exact query was not written in the notes, so this is a simple query suitable for DEPTNO.

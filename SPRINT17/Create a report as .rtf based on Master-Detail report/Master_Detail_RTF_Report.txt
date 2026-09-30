@@ -1,0 +1,29 @@
+TASK: Create .RTF Report Based on Master-Detail Report
+
+Use this Master-Detail query in Oracle Reports Builder:
+
+SELECT DEPT.DEPTNO,
+       DEPT.DNAME,
+       DEPT.LOC,
+       EMP.EMPNO,
+       EMP.ENAME,
+       EMP.JOB,
+       EMP.MGR,
+       EMP.HIREDATE,
+       EMP.SAL,
+       EMP.COMM,
+       EMP.DEPTNO
+FROM DEPT, EMP
+WHERE EMP.DEPTNO = DEPT.DEPTNO;
+
+Then:
+1. Choose Group Above or Group Left report style.
+2. Save the report (.rdf).
+3. Register/submit it in EBS with output format XML.
+4. Save the XML output.
+5. Open MS Word > BI Publisher.
+6. Load Sample XML.
+7. Use Table Wizard.
+8. Group By: DEPTNO.
+9. Sort By: ENAME.
+10. Save the template as .rtf.

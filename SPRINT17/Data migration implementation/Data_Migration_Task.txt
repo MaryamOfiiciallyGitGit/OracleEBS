@@ -1,0 +1,39 @@
+TASK: Data Migration Implementation (SQL Loader)
+
+1) Create the target table in SQL*Plus:
+
+CREATE TABLE MARYAM_TEST
+(
+  ID      NUMBER,
+  NAME    CHAR(50),
+  COURSE  VARCHAR2(100)
+);
+
+2) Create the data file: MARYAMDATA.dat
+
+1,'MARYAM','ORACLE'
+2,'SUNIL','C++'
+3,'JORGE','PYTHON'
+4,'SARA','REPORT'
+5,'SAMI','PYTHON'
+
+3) Create the control file: MARYAMCONTROL.ctl
+
+LOAD DATA
+INFILE '/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/reports/US/MARYAMDATA.dat'
+INTO TABLE MARYAM_TEST
+FIELDS TERMINATED BY ","
+OPTIONALLY ENCLOSED BY '"'
+(ID, NAME, COURSE)
+
+4) Move MARYAMDATA.dat and MARYAMCONTROL.ctl to the EBS server using WinSCP.
+
+5) Run SQL Loader from CMD:
+
+sqlldr userid=apps/apps@EBSDB control='/u01/install/VISION/fs1/EBSapps/appl/fnd/12.0.0/reports/US/MARYAMCONTROL.ctl'
+
+6) Check the loaded data:
+
+SELECT * FROM MARYAM_TEST;
+
+Expected: the 5 records from MARYAMDATA.dat are loaded into MARYAM_TEST.

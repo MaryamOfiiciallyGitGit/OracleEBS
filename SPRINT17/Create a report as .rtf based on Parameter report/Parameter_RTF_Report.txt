@@ -1,0 +1,23 @@
+TASK: Create .RTF Report Based on Parameter Report
+
+Use this query:
+
+SELECT *
+FROM EMP
+WHERE DEPTNO = :DNO;
+
+:DNO is a BIND PARAMETER.
+
+Then:
+1. Create the report in Oracle Reports Builder.
+2. Save and compile the .rdf report.
+3. Register it in Oracle EBS.
+4. Define parameter DNO in the Concurrent Program.
+5. Attach a suitable Value Set for DNO.
+6. Set report output to XML.
+7. Submit the request and enter a DEPTNO value such as 10, 20, or 30.
+8. Save the XML output.
+9. Open MS Word > BI Publisher.
+10. Load Sample XML.
+11. Design the report.
+12. Save as .rtf.
